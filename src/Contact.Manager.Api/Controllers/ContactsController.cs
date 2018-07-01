@@ -48,36 +48,6 @@ namespace Contact.Manager.Api.Controllers
 		[HttpPut("{id}")]
 		public IActionResult PutContact([FromRoute] int id, [FromBody] ContactModel contact)
 		{
-			//if (!ModelState.IsValid)
-			//{
-			//	return BadRequest(ModelState);
-			//}
-
-			//if (id != contact.Id)
-			//{
-			//	return BadRequest();
-			//}
-
-			//_context.Entry(contact).State = EntityState.Modified;
-
-			//try
-			//{
-			//	await _context.SaveChangesAsync();
-			//}
-			//catch (DbUpdateConcurrencyException)
-			//{
-			//	if (!ContactExists(id))
-			//	{
-			//		return NotFound();
-			//	}
-			//	else
-			//	{
-			//		throw;
-			//	}
-			//}
-
-			//return NoContent();
-
 			if (contact == null || contact.Id != id)
 			{
 				return BadRequest();

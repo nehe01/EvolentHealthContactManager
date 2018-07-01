@@ -37,7 +37,7 @@ namespace Contact.Manager.Api.Migrations
                         .IsRequired()
                         .HasMaxLength(50);
 
-                    b.Property<int>("PhoneNumber")
+                    b.Property<decimal>("PhoneNumber")
                         .HasColumnType("numeric");
 
                     b.Property<bool>("Status");

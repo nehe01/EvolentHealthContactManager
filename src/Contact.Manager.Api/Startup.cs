@@ -21,10 +21,6 @@ namespace Contact.Manager.Api
 		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services)
 		{
-			//services.AddDbContext<ContactDbContext>(opt =>
-			//					opt.UseInMemoryDatabase("ContactsDatabase"));
-			//services.AddDbContext<ContactDbContext>(options =>
-			//	options.UseSqlServer(Configuration.GetConnectionString("ContactsDatabase")));
 			services.AddDbContext<ContactDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ContactsDatabase"), b => b.MigrationsAssembly("Contact.Manager.Api")));
 			services.AddMvc();
 

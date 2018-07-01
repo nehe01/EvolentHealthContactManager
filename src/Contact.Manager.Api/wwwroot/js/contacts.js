@@ -4,11 +4,11 @@ $(document).ready(function () {
 	});
 });
 
-let contacts = null;
+let apiUrl = 'http://localhost:64984/api/Contacts/';
 
 function getContacts() {
 	$.ajax({
-		url: "http://localhost:64984/api/Contacts",
+		url: apiUrl,
 		type: "Get",
 		success: function (data) {
 			$("#contacts").find("tr:not(:first)").remove();
@@ -28,7 +28,6 @@ function getContacts() {
 	});
 }
 
-//function makeContactEditable() {
 $(document).on('click', '#updateField', function () {
 	$('#contacts').find('.btn-primary').hide();
 	$('#contacts').find('.edit').show();
@@ -37,22 +36,19 @@ $(document).on('click', '#updateField', function () {
 	$(this).closest('tr').find('#statusColumn').add().html('<select><option name="tdStatus" value="true" selected="selected"> Active</option><option name="tdStatus" value="false">Inactive</option></select>');
 	$(this).closest('tr').find('#actionColumn').attr('contenteditable', 'false');
 });
-//}
 
-function updateContact(current, id) {
-	//$(document).on('click', '#saveField', function (id) {
-	var c = $(current).closest('tr').find('option[name="tdStatus"]:selected').val;
+function updateContact(current, id) {		
 	var contactInfo = {
 		Id: id,
 		FirstName: $(current).closest("tr").find("#firstNameColumn").text(),
 		LastName: $(current).closest("tr").find("#lastNameColumn").text(),
 		Email: $(current).closest("tr").find("#emailColumn").text(),
 		PhoneNumber: $(current).closest("tr").find("#phoneNumberColumn").text(),
-		Status: c
-	}
+		Status: $(current).closest('tr').find('#statusColumn').find('option[name="tdStatus"]:selected').val()
+	};
 
 	$.ajax({
-		url: "http://localhost:64984/api/Contacts/" + id,
+		url: apiUrl + id,
 		type: "Put",
 		data: JSON.stringify(contactInfo),
 		contentType: 'application/json; charset=utf-8',
@@ -64,7 +60,6 @@ function updateContact(current, id) {
 		},
 		error: function (msg) { alert(msg); }
 	});
-//});
 }
 
 function saveContact() {
@@ -74,11 +69,11 @@ function saveContact() {
 		Email: $("#email").val(),
 		PhoneNumber: $("#phoneNumber").val(),
 		Status: $("option[name='status']:selected").val()
-	}
+	};
 
 	$.ajax({
 		type: 'POST',
-		url: 'http://localhost:64984/api/Contacts/',
+		url: apiUrl,
 		dataType: 'json',
 		contentType: 'application/json; charset=utf-8',
 		data: JSON.stringify(contactInfo),
@@ -93,7 +88,7 @@ function saveContact() {
 
 function deleteContact(id) {
 	$.ajax({
-		url: "http://localhost:64984/api/Contacts/" + id,
+		url: apiUrl + id,
 		type: 'DELETE',
 		success: function (result) {
 			getContacts();
