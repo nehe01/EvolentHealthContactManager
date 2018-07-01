@@ -1,0 +1,12 @@
+D:\Angular\Repositories\EvolentHealthContactManager\src\Contact.Manager.Api\bin\Release\netcoreapp2.0\Contact.Manager.Api.deps.json
+D:\Angular\Repositories\EvolentHealthContactManager\src\Contact.Manager.Api\bin\Release\netcoreapp2.0\Contact.Manager.Api.runtimeconfig.json
+D:\Angular\Repositories\EvolentHealthContactManager\src\Contact.Manager.Api\bin\Release\netcoreapp2.0\Contact.Manager.Api.runtimeconfig.dev.json
+D:\Angular\Repositories\EvolentHealthContactManager\src\Contact.Manager.Api\bin\Release\netcoreapp2.0\Contact.Manager.Api.dll
+D:\Angular\Repositories\EvolentHealthContactManager\src\Contact.Manager.Api\bin\Release\netcoreapp2.0\Contact.Manager.Api.pdb
+D:\Angular\Repositories\EvolentHealthContactManager\src\Contact.Manager.Api\bin\Release\netcoreapp2.0\Contact.Manager.Data.Access.Layer.dll
+D:\Angular\Repositories\EvolentHealthContactManager\src\Contact.Manager.Api\bin\Release\netcoreapp2.0\Contact.Manager.Data.Access.Layer.pdb
+D:\Angular\Repositories\EvolentHealthContactManager\src\Contact.Manager.Api\obj\Release\netcoreapp2.0\Contact.Manager.Api.csproj.CoreCompileInputs.cache
+D:\Angular\Repositories\EvolentHealthContactManager\src\Contact.Manager.Api\obj\Release\netcoreapp2.0\Contact.Manager.Api.AssemblyInfoInputs.cache
+D:\Angular\Repositories\EvolentHealthContactManager\src\Contact.Manager.Api\obj\Release\netcoreapp2.0\Contact.Manager.Api.AssemblyInfo.cs
+D:\Angular\Repositories\EvolentHealthContactManager\src\Contact.Manager.Api\obj\Release\netcoreapp2.0\Contact.Manager.Api.dll
+D:\Angular\Repositories\EvolentHealthContactManager\src\Contact.Manager.Api\obj\Release\netcoreapp2.0\Contact.Manager.Api.pdb
