@@ -1,14 +1,14 @@
 # Evolent Health Contact Manager
 Its for maintaining the contact information
 
-Software Requirements
-.net core 2.0 runtime
-.net core web hosting bundle
-IIS
-SQL Server or localdb of visual studio
-Postman (if only api want to test) (optional)
+# Software Requirements
+- .net core 2.0 runtime
+- .net core web hosting bundle
+- IIS
+- SQL Server or localdb of visual studio
+- Postman (if only api want to test) (optional)
 
-Steps to run the application
+# Steps to run the application
 
 - Clone source code from github repository using this ssh url (git@github.com:nehe01/EvolentHealthContactManager.git).
 - Run ci-build script to build and publish project. It will publish artifacts on ".\src\Contact.Manager.Api\bin\Release\netcoreapp2.0\publish\".
@@ -21,8 +21,8 @@ Steps to run the application
 	OR
 - Use any Web API testing tools like Postman. To add contact use same link with POST Http request, To edit contact use same link with PUT Http request, To list contacts use same url with GET Http request, To delete contacts use same link with DELETE Http request
 
-Solution Architechture:
-Contact.Manager.Api: This is main web api which perform CRUD operations. This is business logic of application.
+# Solution Architechture:
+- Contact.Manager.Api: This is main web api which perform CRUD operations. This is business logic of application.
 	- wwwroot: This contains all js, css and html files which are used in application's UI.
-Contact.Manager.Data.Access.Layer: This is data access layer which is used for EF database operations
-Contact.Manager.Api.Tests: This is mainly for tests of project. (Due to time constraints test are not written)
+- Contact.Manager.Data.Access.Layer: This is data access layer which is used for EF database operations
+- Contact.Manager.Api.Tests: This is mainly for tests of project. (Due to time constraints test are not written)
