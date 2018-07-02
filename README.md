@@ -11,9 +11,9 @@ Its for maintaining the contact information
 # Steps to run the application
 
 - Clone source code from github repository using this ssh url (git@github.com:nehe01/EvolentHealthContactManager.git).
-- Run ci-build script form command prompt to build and publish project. It will publish artifacts on ".\src\Contact.Manager.Api\bin\Release\netcoreapp2.0\publish\".
+- Run ci-build script form command prompt at /src level to build and publish project. It will publish artifacts on ".\src\Contact.Manager.Api\bin\Release\netcoreapp2.0\publish\".
 - Create a Website in IIS and refer above location for physical path and use port no '64984', as we dont have to change it in js file
-- While configuring website make sure that in applicatin pool of that website select "No Managed Code" for .net framework version
+- While configuring website make sure that in applicatin pool of that website select "No Managed Code" for .net framework version as we are using .Net core
 - Change connection string value of attachdbfilename accordingly where mdf file is placed and also change server value according to database source in appsettings.json file.
 
 - Launch the Website (This request will open index.html file)
