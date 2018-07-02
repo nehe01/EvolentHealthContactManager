@@ -2,8 +2,8 @@
 Its for maintaining the contact information
 
 # Software Requirements
-- .net core 2.0 runtime
-- .net core web hosting bundle
+- .Net core 2.0 runtime (https://www.microsoft.com/net/download/all)
+- .Net core web hosting bundle (https://www.microsoft.com/net/download/dotnet-core/runtime-2.0.3) under windows
 - IIS
 - SQL Server or localdb of visual studio
 - Postman (if only api want to test) (optional)
@@ -11,7 +11,7 @@ Its for maintaining the contact information
 # Steps to run the application
 
 - Clone source code from github repository using this ssh url (git@github.com:nehe01/EvolentHealthContactManager.git).
-- Run ci-build script to build and publish project. It will publish artifacts on ".\src\Contact.Manager.Api\bin\Release\netcoreapp2.0\publish\".
+- Run ci-build script form command prompt to build and publish project. It will publish artifacts on ".\src\Contact.Manager.Api\bin\Release\netcoreapp2.0\publish\".
 - Create a Website in IIS and refer above location for physical path and use port no '64984', as we dont have to change it in js file
 - While configuring website make sure that in applicatin pool of that website select "No Managed Code" for .net framework version
 - Change connection string value of attachdbfilename accordingly where mdf file is placed and also change server value according to database source in appsettings.json file.
